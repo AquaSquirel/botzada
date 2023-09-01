@@ -3,7 +3,7 @@ const client = require('../index');
 const { Colors, ButtonBuilder, ActionRowBuilder } = require('discord.js');
 
 client.on('messageCreate', msg => {
-    if (msg.content.includes('!ticket')) {
+    if (msg.content == '!ticket') {
         msg.delete()
 
         if (!msg.member.permissions.has('Administrator')) return msg.reply('Você não tem permissão para isso!').then(msg => setTimeout(() => msg.delete(), 5000))
