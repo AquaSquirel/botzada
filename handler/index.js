@@ -9,4 +9,11 @@ module.exports = async (client) => {
             require(`../events/${arquivo}`)
         })
     })
+    fs.readdir('./events/music', (erro, arquivos) => {
+        arquivos.forEach(arquivo => {
+            if (!arquivo.endsWith('.js')) return;
+            require(`../events/music/${arquivo}`)
+        })
+    })
 }
+
