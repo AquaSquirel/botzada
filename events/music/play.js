@@ -26,7 +26,7 @@ client.on('messageCreate', async msg => {
 
         const searchResultAuthor = searchResult.tracks[0].author
         if (searchResultAuthor.includes('Jão')) {   
-
+            
         }
 
         if (!queue.isPlaying()) {
@@ -48,7 +48,7 @@ player.events.on('audioTrackAdd', (queue, track) => {
                 .setDescription(`[**${track.title}**](${track.url})\n⠀`)
                 .setThumbnail(`${track.thumbnail}`)
                 .setColor(Colors.Purple)
-                .setFooter({ text: `Pedido por:  ${searchResult.requestedBy}`, iconURL: `${queue.metadata.membro.user.displayAvatarURL({ dynamic: true })}` })
+                .setFooter({ text: `Pedido por:  ${queue.metadata.membro.nickname}`, iconURL: `${queue.metadata.membro.user.displayAvatarURL({ dynamic: true })}` })
         ]
     });
     console.log(`Musica ${track.title} adicionada a lista de reprodução`);
