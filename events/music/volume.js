@@ -1,5 +1,5 @@
 const client = require('../../index');
-const { useQueue, useMainPlayer } = require('discord-player');
+const { useMainPlayer } = require('discord-player');
 
 client.on('messageCreate', async msg => {
     if (msg.content.includes('!volume')) {
